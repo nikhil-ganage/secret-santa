@@ -149,6 +149,7 @@ def doc_generator(df):
 def genSecretSanta(member_df,processing_year, *args):
     givers = member_df['member_id'].tolist()
     santa_df = pd.DataFrame(columns=['receiver','giver'])
+    member_dict = member_df.set_index('member_id')['family_hash'].to_dict()
     tries=0;
     tries_max = 100;
     result = []
@@ -178,7 +179,7 @@ def genSecretSanta(member_df,processing_year, *args):
                 print(res)
                 print(es_year)
                 # Ensure the giver and reciever are not the same, and they are not from the same family and they have not been paired in the last 3 years
-                while (receiver == giver or 
+                while ((receiver == giver) or (member_dict[giver] == member_dict[receiver]) or 
                     (int(es_year) == previous_year or int(es_year) == previous_2_year or int(es_year) == int(processing_year) )) and tries <tries_max:
                     receiver = random.choice(receivers)
                     # Generate pair hash value
