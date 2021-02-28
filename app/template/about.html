@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+.grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+}
+.box {
+  color: white;
+  font-size: 4vw;
+  padding: 10px;
+  background: gold;
+  text-align: center;
+}
+.box {
+  grid-column: span 1;
+  }
+
+.buttonBox {
+  color: white;
+  font-size: 4vw;
+  padding: 10px;
+  background: gold;
+  text-align: center;
+}
+.buttonBox {
+  grid-column: span 7;
+  }
+.label {
+  color: white;
+  font-size: 2vw;
+  padding: 10px;
+  background: gold;
+  text-align: center;
+}
+</style>
+  </head>
+  <body>
+
+    {% extends "base.html" %}
+    {% block content %}
+    
+    <h1> About in base About Flask </h1>
+
+    <form class="myForm">
+<main class="grid">
+  <div class="box">
+  </div>
+  <div class="label"><label for="first_name">First Name </label></div>
+  <div class="label"><label for="family_name">Family Name </label></div>
+  <div class="label"><label for="Age">Age</label></div>
+  <div class="label"><label for="Gender">Gender</label></div>
+  <div class="label"><label for="Relation">Relation</label></div>
+  <div class="label"><label for="Year">Year Added</label></div>
+  <div class="label"><label for="family_name">Member 1</label></div>
+  <div class="box"><input type = "text" name="firstname1"></div>
+  <div class="box"><input type = "text" name="famliyname1"></div>
+  <div class="box"><input type = "text" name="Age1"></div>
+  <div class="box"><input type = "text" name="Gender1"></div>
+  <div class="box"><input type = "text" name="Relation1"></div>
+  <div class="box"><input type = "text" name="year1"></div>
+  <div class="label"><label for="family_name">Member 2</label></div>
+  <div class="box"><input type = "text" name="firstname2"></div>
+  <div class="box"><input type = "text" name="famliyname2"></div>
+  <div class="box"><input type = "text" name="Age2"></div>
+  <div class="box"><input type = "text" name="Gender2"></div>
+  <div class="box"><input type = "text" name="Relation2"></div>
+  <div class="box"><input type = "text" name="year2"></div>
+  <div class="label"><label for="family_name">Member 3</label></div>
+  <div class="box"><input type = "text" name="firstname3"></div>
+  <div class="box"><input type = "text" name="famliyname3"></div>
+  <div class="box"><input type = "text" name="Age3"></div>
+  <div class="box"><input type = "text" name="Gender3"></div>
+  <div class="box"><input type = "text" name="Relation3"></div>
+  <div class="box"><input type = "text" name="year3"></div>
+  <div class="label"><label for="family_name">Member 4</label></div>
+  <div class="box"><input type = "text" name="firstname4"></div>
+  <div class="box"><input type = "text" name="famliyname4"></div>
+  <div class="box"><input type = "text" name="Age4"></div>
+  <div class="box"><input type = "text" name="Gender4"></div>
+  <div class="box"><input type = "text" name="Relation4"></div>
+  <div class="box"><input type = "text" name="year4"></div>
+  <div class="label"><label for="family_name">Member 5</label></div>
+  <div class="box"><input type = "text" name="firstname5"></div>
+  <div class="box"><input type = "text" name="famliyname5"></div>
+  <div class="box"><input type = "text" name="Age5"></div>
+  <div class="box"><input type = "text" name="Gender5"></div>
+  <div class="box"><input type = "text" name="Relation5"></div>
+  <div class="box"><input type = "text" name="year5"></div>
+  <div class="label"><label for="family_name">Member 6</label></div>
+  <div class="box"><input type = "text" name="firstname6"></div>
+  <div class="box"><input type = "text" name="famliyname6"></div>
+  <div class="box"><input type = "text" name="Age6"></div>
+  <div class="box"><input type = "text" name="Gender6"></div>
+  <div class="box"><input type = "text" name="Relation6"></div>
+  <div class="box"><input type = "text" name="year6"></div>
+  <div class="buttonBox"><button>Submit</button></div>
+</main>
+</form>
+    
+    </main>
+
+    {% endblock %}
+  </body>
+</html>

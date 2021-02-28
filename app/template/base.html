@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask Template Example</title>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+    
+<div>
+
+<div>
+<img src="{{url_for('static', filename='secret-santa.jpg')}}" alt="Secret Santa" width="1000" height="200"/>  
+</div>
+
+    </header>
+    <body>
+	<div>
+	<strong><nav>
+          <ul>
+            <li><a class="active" href="{{ url_for('home') }}">Add Family Members</a></li>
+	    <li><a href="{{ url_for('member') }}">Add Single Member</a></li>
+            <li><a href="{{ url_for('member_display') }}">Show Family Members</a></li>
+	    <li><a href="{{ url_for('santagen') }}">Secret Santa Generator</a></li>
+	    <li><a href="{{ url_for('santa_display') }}">Secret Santa Result</a></li>
+	    <li><a href="{{ url_for('delete') }}">Delete Data</a></li>
+	    <li class="active" style="float:right"><a href="#about">Nikhil Ganage</a></li>
+	  </ul>
+        </nav></strong>
+      </div>
+    </body>
+    
+
+     
+{% block content %}
+{% endblock %}
+
+ </body>
+
+
+</html>

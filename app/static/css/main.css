@@ -1,0 +1,27 @@
+grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+}
+box {
+  color: white;
+  font-size: 4vw;
+  padding: 10px;
+  background: gold;
+  text-align: center;
+}
+box {
+  grid-column: span 1;
+  }
+
+buttonBox {
+  color: white;
+  font-size: 4vw;
+  padding: 10px;
+  background: gold;
+  text-align: center;
+}
+buttonBox {
+  grid-column: span 7;
+  } 

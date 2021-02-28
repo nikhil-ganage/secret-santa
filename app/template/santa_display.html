@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+ 
+ td {
+        width: 150px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+      }
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 25px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.dropdownb {
+  background-color: white;
+  border: none;
+  color: gray;
+  padding: 25px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+  </head>
+  <body>
+
+    {% extends "base.html" %}
+    {% block content %}
+  <h2 style="color:#c54245;">SHOW SECRET SANTA RESULT:</h2>  
+  <form method="POST" action="">
+      <select id="year" name="year" class="dropdownb">
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+    </select> 
+      <div >
+	<button class=button>Submit</button>
+      </div>
+    </form>
+    <form method="GET" action="">
+  <div >
+        <button class=button>Show All</button>
+      </div>
+</form>
+
+    <table>
+  <thead>
+    <tr>
+        <th>receiver_member_id</th>
+        <th>giver_member_id</th>
+        <th>year</th>
+        <th>r_g_y_hash</th>
+    </tr>
+    </thead>    
+    <tbody>
+     {% for row in data %}    
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    {% endblock %}
+  </body>
+</html>
+

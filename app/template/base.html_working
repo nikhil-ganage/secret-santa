@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flask Template Example</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/main.css') }}>
+</head>
+
+
+<body>
+    <header>
+      <div>
+	<h1>First Web App</h1>
+        <strong><nav>
+          <ul>
+            <li><a href="{{ url_for('home') }}">Add Family Members</a></li>
+            <li><a href="{{ url_for('santagen') }}">Secret Santa Generator</a></li>
+	  </ul>
+        </nav></strong>
+      </div>
+    </header>
+
+    <h1> BASE Flask Template Example</h1>
+     
+{% block content %}
+{% endblock %}
+
+ </body>
+
+
+</html>

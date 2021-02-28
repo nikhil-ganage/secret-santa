@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+.grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.box {
+  color: white;
+  font-size: 4vw;
+  padding: 10px;
+  background: #4CAF50;
+  text-align: center;
+}
+
+.box {
+  grid-column: span 1;
+  }
+.buttonBox {
+  color: white;
+  font-size: 3vw;
+  padding: 10px;
+  background: #c54245;
+  text-align: center;
+}
+.buttonBox {
+  grid-column: span 2;
+  }
+.label {
+  color: white;
+  font-size: 3vw;
+  padding: 10px;
+  background: gold;
+  text-align: center;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 25px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 25px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    </style>
+  </head>
+  <body>
+
+    {% extends "base.html" %}
+    {% block content %}
+     <h1 style="color:#c54245;"> SECRET SANTA GENERATOR </h1>
+    <span> {{message}} </span>
+    <form method="POST" action="">
+<main class="grid">
+<center>
+  <div class="box"> <label for="Year">Select Year </label></div>
+  <div class="box"> 
+    <select id="year" name="year" class="button2">
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+    </select> 
+  </div>
+  <div class="buttonBox"><button class="button">Submit</button></div>
+</center>
+</main>
+</form>
+    </main>
+
+    {% endblock %}
+  </body>
+</html>
+

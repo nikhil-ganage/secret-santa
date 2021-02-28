@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add Single Member</title>
+    <style>
+.grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+}
+.box {
+  color: white;
+  font-size: 3vw;
+  padding: 1px;
+  background: #c54245;
+  text-align: center;
+}
+.box {
+  grid-column: span 1;
+  }
+
+.buttonBox {
+  color: white;
+  font-size: 4vw;
+  padding: 10px;
+  background: #c54245;
+  text-align: center;
+}
+.buttonBox {
+  grid-column: span 8;
+  }
+.label {
+  color: white;
+  font-size: 2vw;
+  padding: 10px;
+  background: #c54245;
+  text-align: center;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 25px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+  </head>
+  <body>
+    {% extends "base.html" %}
+    {% block content %}
+    <form method="POST" action="">
+  <center>
+  {{message}}
+  <h3 style="color:#c54245;"> Add Single Family Member - Get family_Hash value from "Show Family Members" page</h3>
+  <br>
+  <main class="grid">
+<div class="box"></div>
+  <div class="label"><label for="first_name">First Name </label></div>
+  <div class="label"><label for="family_name">Family Name </label></div>
+  <div class="label"><label for="Age">Age</label></div>
+  <div class="label"><label for="Gender">Gender</label></div>
+  <div class="label"><label for="Relation">Relation</label></div>
+  <div class="label"><label for="Year">Year Added</label></div>
+  <div class="label"><label for="Year">Family Hash</label></div>
+  <div class="label"><label for="family_name">Member 1</label></div>
+    <div class="box"><input type = "text" name="first_name" required></div>
+  <div class="box"><input type = "text" name="family_name"></div>
+  <div class="box"><input type = "text" name="Age"></div>
+  <div class="box"><input type = "text" name="Gender"></div>
+  <div class="box"><input type = "text" name="Relation"></div>
+  <div class="box"><input type = "text" name="year_added"></div>
+  <div class="box"><input type = "text" name="family_hash"></div>
+  <div class="buttonBox"><button class =button>Submit</button></div>
+  </main>
+        </center>
+     </form>
+     {% endblock %}
+  </body>
+</html>
+

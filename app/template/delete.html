@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+ 
+ td {
+        width: 150px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+      }
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 25px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.dropdownb {
+  background-color: white;
+  border: none;
+  color: gray;
+  padding: 25px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+</style>
+  </head>
+  <body>
+
+    {% extends "base.html" %}
+    {% block content %}
+    {{data}}
+  <h2 style="color:#c54245;">DELETE MEMBER DATA AND SECRET SANTA DRAW:</h2>  
+  <form method="POST" action="">
+      <select id="del" name="del" class="dropdownb">
+        <option value="secretsanta">Delete Secret Santa Draw Data</option>
+        <option value="members">Delete all members Data</option>
+    </select> 
+      <div >
+  <button class=button>Submit</button>
+      </div>
+    </form>
+
+
+
+    {% endblock %}
+  </body>
+</html>
